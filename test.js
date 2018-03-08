@@ -93,7 +93,7 @@ describe('MyController', function() {
                 "fax": "(515)929-1930",
                 "email": "direc@inmar.com"
             }]);
-        expect($scope.new)toBe({});
+        expect($scope.new).toBe({});
     });
 
 
