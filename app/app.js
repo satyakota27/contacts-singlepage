@@ -9,10 +9,11 @@ app.controller('contactsCtrl', function($scope, $http) {
     }, function myError(response) {
         $scope.contacts = response.statusText;
     });
-    $scope.new ={};
+    //$scope.new ={};
     $scope.addRow = function(){
+        var newContactId = $scope.contacts.length + 1;
         $scope.contacts.push({
-            type: $scope.new.type, name: $scope.new.name, title: $scope.new.title,
+            id: newContactId, type: $scope.new.type, name: $scope.new.name, title: $scope.new.title,
             phone: $scope.new.phone, ext: $scope.new.ext, fax: $scope.new.fax, email: $scope.new.email
         });
         $scope.new = {};
